@@ -1,0 +1,17 @@
+@font-face {
+  font-family: $font-cgtimes;
+  src: url("../fonts/CGTimes.woff2") format("woff2"),
+    url("../fonts/CGTimes.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $font-helvetica-neue;
+  src: url("../fonts/HelveticaNeue-Roman.woff2") format("woff2"),
+    url("../fonts/HelveticaNeue-Roman.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
