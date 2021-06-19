@@ -11,20 +11,24 @@ const IS_DEVELOPMENT = process.env.NODE_ENV === "dev";
 
 const dirApp = path.join(__dirname, "app");
 const dirShared = path.join(__dirname, "shared");
+const dirImages = path.join(__dirname, "images");
 const dirStyles = path.join(__dirname, "styles");
 const dirNode = "node_modules";
 
 module.exports = {
   entry: [path.join(dirApp, "index.js"), path.join(dirStyles, "index.scss")],
   resolve: {
-    modules: [dirApp, dirShared, dirStyles, dirNode],
+    modules: [dirApp, dirShared, dirStyles, dirNode, dirImages],
   },
   plugins: [
     new webpack.DefinePlugin({
       IS_DEVELOPMENT,
     }),
     new CopyWebpackPlugin({
-      patterns: [{ from: "./shared", to: "" }],
+      patterns: [
+        { from: "./shared", to: "" },
+        { from: "./images", to: "images" },
+      ],
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
