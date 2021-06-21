@@ -8,7 +8,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 app.get("/", (req, res) => {
-  res.render("pages/base");
+  res.render("pages/home");
 });
 
 app.listen("3000", () => {
