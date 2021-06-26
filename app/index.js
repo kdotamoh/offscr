@@ -1,5 +1,4 @@
-import { gsap, Power3, Expo } from "gsap";
-import { split } from "./utils/text";
+import { gsap, Expo } from "gsap";
 
 let DOM = {
   content: {
@@ -27,22 +26,22 @@ const timelineSettings = {
 
 const master = gsap.timeline({ paused: true });
 
-const animateLink = () => {
-  const tl = gsap.timeline().add("start").from(
-    DOM.content.home.chars,
-    {
-      duration: timelineSettings.charsDuration,
-      ease: Power3.easeIn,
-      y: 100,
-      opacity: 0,
-      stagger: timelineSettings.staggerValue,
-      delay: -1.4,
-    },
-    "start"
-  );
+// const animateLink = () => {
+//   const tl = gsap.timeline().add("start").from(
+//     DOM.content.home.chars,
+//     {
+//       duration: timelineSettings.charsDuration,
+//       ease: Power3.easeIn,
+//       y: 100,
+//       opacity: 0,
+//       stagger: timelineSettings.staggerValue,
+//       delay: -1.4,
+//     },
+//     "start"
+//   );
 
-  return tl;
-};
+//   return tl;
+// };
 
 const animateBlack = () => {
   const tl = gsap
@@ -130,9 +129,8 @@ const animateImg = () => {
 };
 
 master.add(animateBlack());
-master.add(animateLink());
 master.add(animateWhite());
-master.add(setUp(), "+=.3");
+master.add(setUp());
 master.add(animateLogo(), "logo");
 master.add(animateH1(), "logo+=0.6");
 master.add(animateImg(), "logo+=0.3");
