@@ -10,7 +10,7 @@
     "client:dev": "webpack serve --progress --config webpack.config.development.js",
     "client:build": "webpack --progress --config webpack.config.build.js",
     "start:dev": "concurrently --kill-others \"npm run server:dev\" \"npm run client:dev\"",
-    "start:prod": "npm run client:build && npm run server:build"
+    "start": "npm run server:build"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
