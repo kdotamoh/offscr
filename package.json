@@ -7,8 +7,8 @@
   "scripts": {
     "server:dev": "nodemon --delay 1500ms --signal SIGTERM app.js",
     "client:dev": "webpack serve --progress --config webpack.config.development.js",
-    "client:build": "webpack --progress --config webpack.config.build.js",
     "start:dev": "concurrently --kill-others \"npm run server:dev\" \"npm run client:dev\"",
+    "build": "webpack --progress --config webpack.config.build.js",
     "start": "node app.js"
   },
   "devDependencies": {
