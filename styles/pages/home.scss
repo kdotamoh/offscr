@@ -193,6 +193,9 @@ img {
 }
 
 .home__play-button {
-  position: relative;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
   z-index: 6;
+  font-size: 3rem;
 }

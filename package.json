@@ -6,11 +6,10 @@
   "license": "MIT",
   "scripts": {
     "server:dev": "nodemon --delay 1500ms --signal SIGTERM app.js",
-    "server:build": "node app.js",
     "client:dev": "webpack serve --progress --config webpack.config.development.js",
     "client:build": "webpack --progress --config webpack.config.build.js",
     "start:dev": "concurrently --kill-others \"npm run server:dev\" \"npm run client:dev\"",
-    "start": "npm run server:build"
+    "start": "node app.js"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
