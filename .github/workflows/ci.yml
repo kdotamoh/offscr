@@ -36,8 +36,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            whoami
-            cd ${{ secrets.PROJECT_PATH }}
-            ls
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
             pm2 start npm --name "offscr" -- start --watch
             nginx -s reload
