@@ -38,5 +38,4 @@ jobs:
           script: |
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
-            pm2 start npm --name "offscr" -- start --watch
-            nginx -s reload
+            pm2 restart all
