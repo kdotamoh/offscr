@@ -30,12 +30,12 @@ jobs:
           target: ${{ secrets.PROJECT_PATH }}
 
       - name: Restart pm2 process
-            uses: appleboy/ssh-action@master
-            with:
-              host: ${{ secrets.SERVER_IP }}
-              username: ${{ secrets.USERNAME }}
-              password: ${{ secrets.SERVER_PASSWORD }}
-              script: |
-                cd ${{ secrets.PROJECT_PATH }}
-                pm2 start npm --name "offscr" -- start --watch
-                nginx -s reload
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            cd ${{ secrets.PROJECT_PATH }}
+            pm2 start npm --name "offscr" -- start --watch
+            nginx -s reload
