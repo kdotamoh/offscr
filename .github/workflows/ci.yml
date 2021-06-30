@@ -26,5 +26,5 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           rm: true
-          source: "./public"
+          source: "./"
           target: ${{ secrets.PROJECT_PATH }}
